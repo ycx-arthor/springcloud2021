@@ -54,4 +54,14 @@ public class PaymentController {
         }
         return discoveryClient;
     }
+
+    @GetMapping("/payment/lb")
+    public String lb(){
+        return serverPort;
+    }
+
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin(){
+        return "hi, i`am paymentzipkin server fall back, welcome ，O(∩_∩)O";
+    }
 }
